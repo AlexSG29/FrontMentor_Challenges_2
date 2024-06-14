@@ -1,7 +1,4 @@
 /* 
-- Violet: hsl(257, 40%, 49%)
-- Soft Magenta: hsl(300, 69%, 71%)
-
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 300 to 800
 
@@ -18,6 +15,18 @@ Poppins
 Weights: 400, 600
  */
 
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    background-color: var(--Violet);
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 main {
     display: flex;
     flex-direction: row;
@@ -36,4 +45,43 @@ main {
    .column-2 {
     order: 2;
    }
+}
+
+img {
+    width: 100dvh;
+    padding: 3rem 2rem 0 2rem;
+}
+header img{
+    width: 25dvh;
+    padding: 2rem 0 0 2.5rem;
+}
+.column-2 {
+    padding: 0 2rem;
+        h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: white;
+        padding: 0 5rem 0 0;
+        font-size: 2.4rem;
+        }
+        p {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 100;
+        color: white;
+        font-size: 1.04rem;
+        padding: 0 5rem 0 0;
+        }
+}
+
+button {
+    background-color: var(--Soft-Magenta);
+    border: none;
+    border-radius: 5rem;
+    padding: 0.7rem 3rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.8rem 0.001rem hsl(0, 0%, 20%);
+    
 }
