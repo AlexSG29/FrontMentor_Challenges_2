@@ -17,3 +17,23 @@
 Poppins
 Weights: 400, 600
  */
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 375px){
+    main {
+        flex-direction:  column;
+        min-width: none;
+    }
+   .column-1 {
+    order: 1;
+   }
+   .column-2 {
+    order: 2;
+   }
+}
