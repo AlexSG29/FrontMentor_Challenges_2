@@ -16,10 +16,38 @@
 ### Body Copy
 
 - Font size (paragraph): 18px
-
-### Font
-
-- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-- Weights: 300, 400, 600
-
  */
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    width: auto;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: var(--very-dark-blue-main);
+}
+
+.card-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--very-dark-blue-card);
+    width: 22rem;
+}
+.card-component .nft-img {
+    width: 20%;
+}
