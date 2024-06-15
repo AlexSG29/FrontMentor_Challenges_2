@@ -127,7 +127,7 @@ button:hover {
     cursor: pointer;
 }
 
-.visually-hidden {
+/* .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -136,4 +136,4 @@ button:hover {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-}
+} */
