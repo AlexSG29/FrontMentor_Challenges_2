@@ -1,87 +1,127 @@
-/* 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 800
-
-.open-sans-<uniquifier> {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  Weights: 400
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-Poppins
-Weights: 400, 600
- */
-
 :root {
     --Violet: hsl(257, 40%, 49%);
     --Soft-Magenta: hsl(300, 69%, 71%);
 }
+
 body {
     background-color: var(--Violet);
     background-image: url("images/bg-desktop.svg");
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+header {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 2rem;   
+}
+
+header img {
+    width: 8rem;
+    margin-left: 10%;
+}
+
 main {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: 60rem;
+    padding: 2rem;
+    gap: 2rem;
 }
 
-@media (max-width: 375px){
-    main {
-        flex-direction:  column;
-        min-width: none;
-    }
-   .column-1 {
-    order: 1;
-   }
-   .column-2 {
-    order: 2;
-   }
+.column-1, .column-2 {
+    flex: 1;
 }
 
-img {
-    width: 100dvh;
-    padding: 3rem 2rem 0 2rem;
+.column-1 img {
+    width: 100%;
+    max-width: 45rem;
+    height: auto;
+    
 }
-header img{
-    width: 25dvh;
-    padding: 2rem 0 0 2.5rem;
+.column-2 h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
 }
-.column-2 {
-    padding: 0 2rem;
-        h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        color: white;
-        padding: 0 5rem 0 0;
-        font-size: 2.4rem;
-        }
-        p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 100;
-        color: white;
-        font-size: 1.04rem;
-        padding: 0 5rem 0 0;
-        }
+.column-2 p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 button {
-    background-color: var(--Soft-Magenta);
+    background-color: white;
     border: none;
-    border-radius: 5rem;
+    border-radius: 50px;
     padding: 0.7rem 3rem;
-    color: white;
+    color: var(--Violet);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     box-shadow: 0.3rem 0.3rem 0.8rem 0.001rem hsl(0, 0%, 20%);
-    
+    cursor: pointer;
+}
+
+@media  (max-width: 768px) {
+    body {
+        background-image: url("images/bg-mobile.svg");
+    }
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .column-1, .column-2 {
+        max-width: 100%;
+    }
+    .column-2 {
+        padding: 0 1rem;
+    }
+    .column-2 h1, .column-1 p {
+        padding: 0;
+    }
+    footer {
+        justify-content: center !important;
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 1rem 2rem;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 5rem;
+}
+footer ul li {
+    display: inline;
+}
+.icon:hover {
+    cursor: pointer;
+    color: var(--Soft-Magenta);
+}
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+    cursor: pointer;
 }
